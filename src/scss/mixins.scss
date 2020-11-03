@@ -1,0 +1,61 @@
+// media query mixins
+
+// Extra large devices (large desktops, 1200px and up)
+// @mixin exLg(){
+//   @media (min-width: $lgBreak){
+//       @content;
+//   }
+// }
+
+// Large devices (desktops, 992px and up)
+@mixin lg(){
+  @media (max-width: $lgBreak - 0.2px){
+      @content;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin md(){
+  @media (max-width: $mdBreak - 0.2px){
+      @content;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin sm(){
+  @media (max-width: $smBreak - 0.2px){
+      @content;
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@mixin xs(){
+  @media (max-width: $xsBreak - 0.2px){
+      @content;
+  }
+}
+
+@mixin wrapper() {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: $exLgWidth;
+  padding:0 $exLgGaps;
+  position: relative;
+
+    @include lg() {
+      max-width: $lgWidth;
+      padding:0 $lgGaps;
+    }
+    @include md() {
+      max-width: $mdWidth;
+      padding:0 $mdGaps;
+    }
+    @include sm() {
+      max-width: $smWidth;
+      padding:0 $smGaps;
+    }
+    @include xs() {
+      max-width: $xsWidth;
+      padding:0 $xsGaps;
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-export-default-from",
+    "@babel/plugin-transform-react-jsx"
+  ],
+  "ignore": [
+    "node_modules"
+  ]
+}
